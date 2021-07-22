@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /><link rel="shortcut icon" href="favicon.bmp" />     
+<title>Exam Results, Adhiyamaan College of Engineering, Hosur.</title>
+
+<script>
+
+$(document).ready(function() {
+
+        //Speed of the slideshow
+        var speed = 5000;
+        
+        //You have to specify width and height in #slider CSS properties
+        //After that, the following script will set the width and height accordingly
+        $('#mask-gallery, #gallery li').width($('#slider').width());
+        $('#gallery').width($('#slider').width() * $('#gallery li').length);
+        $('#mask-gallery, #gallery li, #mask-excerpt, #excerpt li').height($('#slider').height());
+
+        //Assign a timer, so it will run periodically
+        var run = setInterval('newsscoller(0)', speed);
+
+        $('#gallery li:first, #excerpt li:first').addClass('selected');
+
+        //Pause the slidershow with clearInterval
+        $('#btn-pause').click(function () {
+                clearInterval(run);
+                return false;
+        });
+
+        //Continue the slideshow with setInterval
+        $('#btn-play').click(function () {
+                run = setInterval('newsscoller(0)', speed);
+                return false;
+        });
+
+        //Next Slide by calling the function
+        $('#btn-next').click(function () {
+                newsscoller(0);
+                return false;
+        });
+
+        //Previous slide by passing prev=1
+        $('#btn-prev').click(function () {
+                newsscoller(1);
+                return false;
+        });
+
+        //Mouse over, pause it, on mouse out, resume the slider show
+        $('#slider').hover(
+
+                function() {
+                        clearInterval(run);
+                },
+                function() {
+                        run = setInterval('newsscoller(0)', speed);
+                }
+        );
+
+});
+
+
+function newsscoller(prev) {
+
+        //Get the current selected item (with selected class), if none was found, get the first item
+        var current_image = $('#gallery li.selected').length ? $('#gallery li.selected') : $('#gallery li:first');
+        var current_excerpt = $('#excerpt li.selected').length ? $('#excerpt li.selected') : $('#excerpt li:first');
+
+        //if prev is set to 1 (previous item)
+        if (prev) {
+
+                //Get previous sibling
+                var next_image = (current_image.prev().length) ? current_image.prev() : $('#gallery li:last');
+                var next_excerpt = (current_excerpt.prev().length) ? current_excerpt.prev() : $('#excerpt li:last');
+
+        //if prev is set to 0 (next item)
+        } else {
+
+                //Get next sibling
+                var next_image = (current_image.next().length) ? current_image.next() : $('#gallery li:first');
+                var next_excerpt = (current_excerpt.next().length) ? current_excerpt.next() : $('#excerpt li:first');
+        }
+
+        //clear the selected class
+        $('#excerpt li, #gallery li').removeClass('selected');
+
+        //reassign the selected class to current items
+        next_image.addClass('selected');
+        next_excerpt.addClass('selected');
+
+        //Scroll the items
+        $('#mask-gallery').scrollTo(next_image, 800);
+        $('#mask-excerpt').scrollTo(next_excerpt, 800);
+
+}
+
+
+
+</script>
+
+<style>
+
+#slider {
+        /* You MUST specify the width and height */
+        width:680px;
+        height:375px;
+        position:relative;
+        overflow:hidden;
+        border: 5px solid #09F;
+        z-index: auto;
+}
+
+#mask-gallery {
+
+        overflow:hidden;
+}
+
+#gallery {
+        /* Clear the list style */
+        list-style:none;
+        margin:0;
+        padding:0;
+        z-index:0;
+        /* width = total items multiply with #mask gallery width */
+        width:680px;
+        overflow:hidden;
+}
+
+        #gallery li {
+
+
+                /* float left, so that the items are arrangged horizontally */
+                float:left;
+        }
+
+
+#mask-excerpt {
+        /* Set the position */
+        position:absolute;
+        left:0;
+        z-index:10;
+        /* width should be lesser than #slider width */
+        width:680px;
+        overflow:hidden;
+        height: 40px;
+        bottom: 0px;
+
+}
+
+#excerpt {
+        /* Opacity setting for different browsers */
+        filter:alpha(opacity=60);
+        -moz-opacity:0.6;
+        -khtml-opacity: 0.6;
+        opacity: 0.6;
+        /* Clear the list style */
+        list-style:none;
+        margin:0;
+        padding:0;
+        /* Set the position */
+                position:absolute;
+        left:0;
+        /* Set the style */
+        width:680px;
+        background-color:#000;
+        overflow:hidden;
+        font-family:Verdana, Geneva, sans-serif;
+        font-size:16px;
+        color:#fff;
+        height: 40px;
+        bottom: 0px;
+        font-weight: bold;
+}
+
+        #excerpt li {
+                padding:5px;
+        }
+
+
+
+.clear {
+        clear:both;
+}
+
+
+#wrapper #page #page-bgtop #page-bgbtm #content .post .entry #slider1 {
+        border: 5px solid #09F;
+}
+</style>
+
+<link href="css/style1.css" rel="stylesheet" type="text/css" media="screen" />
+<style type="text/css" media="screen">
+
+@import url("fireworks/header/header.css");
+
+</style>
+
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script language="JavaScript1.2" type="text/javascript" src="fireworks/header/mm_css_menu.js"></script>
+</head>
+<body>
+<div class="mainmenu"></div>
+<div id="wrapper"><!-- end #header --><!-- end #menu -->
+  <div id="page">
+                <div id="page-bgtop">
+                        <div id="page-bgbtm">
+                          <div id="content">
+<h2 class="title">Examination Results</h2><form>
+
+<table width="745" border="0" align="center" style="background:#6F9 ">
+  <tr>
+    <th colspan="7" scope="col"><h2>Adhiyamaan College of Engineering(Autonomous)</h2>
+    <p>Dr.MGR Nagar, HOSUR-635130, Tamilnadu, India.</p>
+    <p><strong> UG & PG Degree Examination Results Nov / Dec 2020</strong></p></th>
+  </tr>
+    <tr>
+    <td width="109" align="center"><strong>Name :</strong></td>
+    <td colspan="3"><strong>ROHITH D`SOUZA M</strong></td>
+    <td width="68"><strong>Reg.No:</strong></td>
+    <td colspan="2"><strong>AC18UCS094</strong></td>
+  </tr>
+  <tr>
+    <td height="44" align="center"><strong>Course:</strong></td>
+    <td colspan="3"><strong>
+
+
+
+
+
+
+
+      </strong></td>
+    <td><strong>Branch :</strong></td>
+    <td colspan="2"><strong>
+                                              CSE
+
+
+
+
+
+    </strong></td>
+  </tr>
+  <tr>
+    <td height="31" align="center" bgcolor="#CCCCCC"><strong>S.No</strong></td>
+    <td width="95" align="center" bgcolor="#CCCCCC"><strong>Subject Code</strong></td>
+    <td width="235" align="center" bgcolor="#CCCCCC"><strong>Subject Name</strong></td>
+    <td width="56" align="center" bgcolor="#CCCCCC"><strong>CA</strong></td>
+    <td align="center" bgcolor="#CCCCCC"><strong>EA</strong></td>
+    <td width="61" align="center" bgcolor="#CCCCCC"><strong>Total</strong></td>
+    <td width="91" align="center" bgcolor="#CCCCCC"><strong>Result</strong></td>
+  </tr>
+
+  <tr bgcolor="#FFFFCC">
+    <td align="center" bgcolor="#FFFF99">1</td>
+    <td bgcolor="#FFFF99">518PQT01</td>
+    <td bgcolor="#FFFF99">PROBABILITY AND QUEUEING THEORY</td>
+    <td align="center" bgcolor="#FFFF99">49</td>
+    <td align="center" bgcolor="#FFFF99">48</td>
+    <td align="center" bgcolor="#FFFF99">97</td>
+    <td align="center" bgcolor="#FFFF99">PASS</td>
+  </tr>
+
+  <tr bgcolor="#FFFFCC">
+    <td align="center" bgcolor="#FFFF99">2</td>
+    <td bgcolor="#FFFF99">518CIT02</td>
+    <td bgcolor="#FFFF99">MICROPROCESSORS AND MICROCONTROLLERS</td>
+    <td align="center" bgcolor="#FFFF99">48</td>
+    <td align="center" bgcolor="#FFFF99">44</td>
+    <td align="center" bgcolor="#FFFF99">92</td>
+    <td align="center" bgcolor="#FFFF99">PASS</td>
+  </tr>
+
+  <tr bgcolor="#FFFFCC">
+    <td align="center" bgcolor="#FFFF99">3</td>
+    <td bgcolor="#FFFF99">518CST03</td>
+    <td bgcolor="#FFFF99">OBJECT ORIENTED ANALYSIS AND DESIGN</td>
+    <td align="center" bgcolor="#FFFF99">47</td>
+    <td align="center" bgcolor="#FFFF99">46</td>
+    <td align="center" bgcolor="#FFFF99">93</td>
+    <td align="center" bgcolor="#FFFF99">PASS</td>
+  </tr>
+
+  <tr bgcolor="#FFFFCC">
+    <td align="center" bgcolor="#FFFF99">4</td>
+    <td bgcolor="#FFFF99">518CIT04</td>
+    <td bgcolor="#FFFF99">THEORY OF COMPUTATION</td>
+    <td align="center" bgcolor="#FFFF99">47</td>
+    <td align="center" bgcolor="#FFFF99">37</td>
+    <td align="center" bgcolor="#FFFF99">84</td>
+    <td align="center" bgcolor="#FFFF99">PASS</td>
+  </tr>
+
+  <tr bgcolor="#FFFFCC">
+    <td align="center" bgcolor="#FFFF99">5</td>
+    <td bgcolor="#FFFF99">518BAO03</td>
+    <td bgcolor="#FFFF99">ENGINEERING ETHICS AND HUMAN VALUES</td>
+    <td align="center" bgcolor="#FFFF99">45</td>
+    <td align="center" bgcolor="#FFFF99">47</td>
+    <td align="center" bgcolor="#FFFF99">92</td>
+    <td align="center" bgcolor="#FFFF99">PASS</td>
+  </tr>
+
+  <tr bgcolor="#FFFFCC">
+    <td align="center" bgcolor="#FFFF99">6</td>
+    <td bgcolor="#FFFF99">518CIE01</td>
+    <td bgcolor="#FFFF99">C# and .NET PROGRAMMING</td>
+    <td align="center" bgcolor="#FFFF99">47</td>
+    <td align="center" bgcolor="#FFFF99">42</td>
+    <td align="center" bgcolor="#FFFF99">89</td>
+    <td align="center" bgcolor="#FFFF99">PASS</td>
+  </tr>
+
+  <tr bgcolor="#FFFFCC">
+    <td align="center" bgcolor="#FFFF99">7</td>
+    <td bgcolor="#FFFF99">518CIP06</td>
+    <td bgcolor="#FFFF99">MICROPROCESSORS AND MICROCONTROLLERS LABORATORY</td>
+    <td align="center" bgcolor="#FFFF99">48</td>
+    <td align="center" bgcolor="#FFFF99">46</td>
+    <td align="center" bgcolor="#FFFF99">94</td>
+    <td align="center" bgcolor="#FFFF99">PASS</td>
+  </tr>
+
+  <tr bgcolor="#FFFFCC">
+    <td align="center" bgcolor="#FFFF99">8</td>
+    <td bgcolor="#FFFF99">518CSP07</td>
+    <td bgcolor="#FFFF99">OBJECT ORIENTED ANALYSIS AND DESIGN LABORATORY</td>
+    <td align="center" bgcolor="#FFFF99">49</td>
+    <td align="center" bgcolor="#FFFF99">48</td>
+    <td align="center" bgcolor="#FFFF99">97</td>
+    <td align="center" bgcolor="#FFFF99">PASS</td>
+  </tr>
+
+  <tr bgcolor="#FFFFCC">
+    <td align="center" bgcolor="#FFFF99">9</td>
+    <td bgcolor="#FFFF99">518CIP08</td>
+    <td bgcolor="#FFFF99">EMPLOYABILITY SKILL LABORATORY</td>
+    <td align="center" bgcolor="#FFFF99">43</td>
+    <td align="center" bgcolor="#FFFF99">46</td>
+    <td align="center" bgcolor="#FFFF99">89</td>
+    <td align="center" bgcolor="#FFFF99">PASS</td>
+  </tr>
+    <tr>
+     <td height="78" colspan="7" align="center" bgcolor="#FFFFFF"><h5>*CA-Continous Assessment *EA=End Assessment *WHD=With Held</h5></td>
+  </tr>
+  <tr>
+    <td colspan="7" align="center"><input type="button" value="Print" onclick="window.print()" />
+      <input type="button" value="Back "
+onclick="javascript: history.go(-1)" /></td>
+    </tr>
+</table>
+</form>
+                          </div>
+                                <!-- end #content -->
+
+                                <!-- end #sidebar -->
+                                <div style="clear: both;">&nbsp;</div>
+                        </div>
+
+</div>
+
+Note : This is for information only.  In case of discrepancies, clarify with the hard copy of result in the department
+
+        <div id="bottom"><img src="fireworks/secondbody/fb3.gif" alt="" width="1024" height="19" /></div>
+
+
+</div>
+
+        <!-- end #page -->
+</div>
+
+<div id="footer">
+        <p>Copyright (c) 2011 Adhiyamaan college of engineering, Hosur, Tamilnadu, india</p>
+</div>
+  <!-- end #footer -->
+</body>
+</html>

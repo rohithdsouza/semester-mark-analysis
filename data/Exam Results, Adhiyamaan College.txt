@@ -1,0 +1,132 @@
+Exam Results, Adhiyamaan College of Engineering, Hosur.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Examination Results
+
+
+Adhiyamaan College of Engineering(Autonomous)
+Dr.MGR Nagar, HOSUR-635130, Tamilnadu, India.
+ UG & PG Degree Examination Results Nov / Dec 2020
+
+
+Name :
+ROHITH D`SOUZA M
+Reg.No:
+AC18UCS094
+
+
+Course:
+
+
+Branch :
+
+                                              CSE
+
+
+
+
+
+
+
+
+
+S.No
+Subject Code
+Subject Name
+CA
+EA
+Total
+Result
+
+
+1
+518PQT01
+PROBABILITY AND QUEUEING THEORY
+49
+48
+97
+PASS
+
+
+2
+518CIT02
+MICROPROCESSORS AND MICROCONTROLLERS
+48
+44
+92
+PASS
+
+
+3
+518CST03
+OBJECT ORIENTED ANALYSIS AND DESIGN
+47
+46
+93
+PASS
+
+
+4
+518CIT04
+THEORY OF COMPUTATION
+47
+37
+84
+PASS
+
+
+5
+518BAO03
+ENGINEERING ETHICS AND HUMAN VALUES
+45
+47
+92
+PASS
+
+
+6
+518CIE01
+C# and .NET PROGRAMMING
+47
+42
+89
+PASS
+
+
+7
+518CIP06
+MICROPROCESSORS AND MICROCONTROLLERS LABORATORY
+48
+46
+94
+PASS
+
+
+8
+518CSP07
+OBJECT ORIENTED ANALYSIS AND DESIGN LABORATORY
+49
+48
+97
+PASS
+
+
+9
+518CIP08
+EMPLOYABILITY SKILL LABORATORY
+43
+46
+89
+PASS
